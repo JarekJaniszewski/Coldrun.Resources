@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(DotNetAppVersions)</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="AutoFixture" Version="$(AutoFixtureVersion)" />
+	<PackageReference Include="AutoFixture.AutoMoq" Version="$(AutoFixtureAutoMoqVersion)" />
+	<PackageReference Include="AutoFixture.NUnit3" Version="$(AutoFixtureNUnit3Version)" />
+	<PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="$(MicrosoftAspNetCoreMvcAbstractionsVersion)" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
+    <PackageReference Include="Moq" Version="$(MoqVersion)" />
+    <PackageReference Include="NUnit" Version="$(NUnitVersion)" />
+    <PackageReference Include="NUnit3TestAdapter" Version="$(NUnit3TestAdapterVersion)" />
+    <PackageReference Include="NUnit.Analyzers" Version="$(NUnitAnalyzersVersion)" />
+    <PackageReference Include="coverlet.collector" Version="$(CoverletCollectorVersion)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+	  <PackageReference Include="coverlet.msbuild" Version="$(CoverletMsbuildVersion)">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+	  </PackageReference>
+
+	  <PackageReference Include="NUnit3TestAdapter">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Resources.Application\Resources.Application.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(DotNetAppVersions)</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="$(AutoMapperVersion)" />
+		<PackageReference Include="FluentValidation" Version="$(FluentValidationVersion)" />
+		<PackageReference Include="MediatR.Extensions.FluentValidation.AspNetCore" Version="$(MediatRExtensionsFluentValidationAspNetCoreVersion)" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="$(MediatRExtensionsMicrosoftDependencyInjectionVersion)" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="$(MicrosoftDataSqlClientVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="$(MicrosoftExtensionsHttpVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="$(MicrosoftExtensionsHttpPollyVersion)" />
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+    <ProjectReference Include="..\Resources.Contracts\Resources.Contracts.csproj" />
+    <ProjectReference Include="..\Resources.Persistence\Resources.Persistence.csproj" />
+  </ItemGroup>
+	
+</Project>
